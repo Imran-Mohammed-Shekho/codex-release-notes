@@ -1,1 +1,31 @@
 
+---
+
+## 📄 File 5: `CONTRIBUTING.md`
+
+```markdown
+# Contributing to Codex Release Notes
+
+Thank you for helping maintainers save time.
+
+## Development Workflow
+
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/your-idea`
+3. Install dev dependencies: `pip install -r requirements.txt`
+4. Run with test commits: `python generate_release_notes.py`
+5. Open a PR with a clear description
+
+## Using Codex During Development
+
+This project itself uses Codex:
+- Generate PR summaries: `python generate_release_notes.py --mode pr-summary`
+- Auto-label issues: (see `.github/workflows/label-issues.yml`)
+
+## Testing Your Changes
+
+```bash
+# Simulate a release with fake commits
+git tag v0.0.0-test
+echo "test commit" >> test.txt && git add . && git commit -m "test: add file"
+python generate_release_notes.py
