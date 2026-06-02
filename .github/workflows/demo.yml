@@ -1,0 +1,35 @@
+name: Mock Mode Demo
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test-mock-mode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Script in Mock Mode
+        run: |
+          # Ensure it runs without an API key
+          python generate_release_notes.py
+
+      - name: Verify Output
+        run: |
+          if ls RELEASE_NOTES_*.md 1> /dev/null 2>&1; then
+            echo "✅ Release notes generated successfully in mock mode!"
+          else
+            echo "❌ Failed to generate release notes."
+            exit 1
+          fi

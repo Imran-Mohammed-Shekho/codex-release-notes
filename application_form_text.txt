@@ -1,0 +1,52 @@
+OPENAI "CODEX FOR OPEN SOURCE" APPLICATION FORM TEXT
+
+DIRECTIONS: Copy and paste the sections below into the corresponding fields in the OpenAI application form.
+
+--------------------------------------------------------------------------------
+FIELD: Project Name
+--------------------------------------------------------------------------------
+Codex Release Note Generator
+
+--------------------------------------------------------------------------------
+FIELD: Project Description (What does your project do?)
+--------------------------------------------------------------------------------
+Codex Release Note Generator is an AI-powered developer tool that automates the creation of professional, user-friendly release notes from Git commit history.
+
+Writing release notes is often a manual, time-consuming task that developers postpone or skip. My tool uses GPT-4o to analyze technical commit logs and synthesize them into structured highlights categorized by features, bug fixes, and maintenance. This ensures that users stay informed while maintainers save valuable time.
+
+Key features include:
+- Automatic detection of the latest Git tags and relevant commits.
+- Intelligent categorization of changes using LLMs.
+- A "Mock Mode" for testing without an API key, making it accessible for onboarding.
+- Seamless integration with GitHub Actions for automated CI/CD workflows.
+
+--------------------------------------------------------------------------------
+FIELD: Why are you applying for the Codex for Open Source program?
+--------------------------------------------------------------------------------
+I am applying because I believe that AI can significantly reduce the "documentation debt" in the open-source community. Many smaller projects lack clear changelogs because the friction of writing them is too high.
+
+By providing a specialized, ready-to-use tool for release note generation, I hope to:
+1. Increase the quality of communication between open-source maintainers and their users.
+2. Demonstrate how LLMs can be integrated into standard developer workflows beyond simple code completion.
+3. Use the program's resources to refine my prompts and potentially expand the tool to support multiple languages and complex multi-repo release structures.
+
+Access to the Codex program would allow me to keep the tool free for the community while ensuring it uses the most capable models for accurate summarization.
+
+--------------------------------------------------------------------------------
+FIELD: How do you plan to use the OpenAI API?
+--------------------------------------------------------------------------------
+The project uses the OpenAI API to perform text summarization and categorization. Specifically:
+
+1. Input: The script feeds a raw list of Git commit messages since the last tag into the GPT-4o model.
+2. Logic: A specialized system prompt instructs the model to act as a technical writer, identifying user-facing value in technical commits.
+3. Output: The API returns a structured Markdown document that includes sections for New Features, Bug Fixes, and Documentation.
+
+I plan to use the API credits to:
+- Power the default "Real Mode" for users.
+- Conduct prompt engineering tests to improve the accuracy of the summarization.
+- Explore adding support for generating PR summaries and auto-labeling issues based on commit content.
+
+--------------------------------------------------------------------------------
+FIELD: GitHub Repository URL
+--------------------------------------------------------------------------------
+[Paste your repository URL here after you create it, e.g., https://github.com/your-username/codex-release-notes]
