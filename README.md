@@ -41,7 +41,7 @@ python --version
 ### 2. Download and Run
 ```bash
 # Clone the repository (or just download the script)
-git clone https://github.com/[YOUR-USERNAME]/codex-release-notes.git
+git clone https://github.com/Imran-Mohammed-Shekho/codex-release-notes.git
 cd codex-release-notes
 
 # Run in Mock Mode (Default)
